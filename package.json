@@ -1,0 +1,67 @@
+{
+  "name": "ng-angular8-datatable",
+  "version": "0.9.1",
+  "description": "DataTable component for Angular framework",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "ngc -p src",
+    "start": "http-server -c-1 -o -p 8875 .",
+    "pretest": "npm run build",
+    "test": "karma start karma.conf.js",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage-remap": "remap-istanbul -i coverage/coverage-final.json -o coverage/coverage-remapped.lcov -t lcovonly",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRafael91/ng-angular8-datatable.git"
+  },
+  "keywords": [
+    "angular",
+    "angular8",
+    "ng",
+    "ng2",
+    "table",
+    "pagination",
+    "sort",
+    "sorting"
+  ],
+  "author": "rafael.sistemasphn@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JRafael91/ng-angular8-datatable/issues"
+  },
+  "homepage": "https://github.com/JRafael91/ng-angular8-datatable#readme",
+  "devDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/compiler": "^8.0.0",
+    "@angular/compiler-cli": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@angular/platform-browser": "^8.0.0",
+    "@angular/platform-browser-dynamic": "^8.0.0",
+    "@types/jasmine": "^2.8.7",
+    "@types/lodash": "4.14.108",
+    "core-js": "^2.5.5",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.7",
+    "remap-istanbul": "^0.10.1",
+    "rimraf": "^2.6.2",
+    "rxjs": "^6.0.0",
+    "systemjs": "^0.21.3",
+    "typescript": "3.4.5",
+    "zone.js": "^0.9.1"
+  },
+  "dependencies": {
+    "lodash": "^4.0.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.0.0"
+  }
+}
