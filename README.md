@@ -33,21 +33,15 @@ export class AppModule {
 
 ``` html
 
-<table class="table table-striped" [svData]="data" #sv="svDataTable" [svRowsOnPage]="5">
+<table class="table table-striped" [svData]="data" #sv="svDataTable" [svRowsOnPage]="5" svSortBy="name" svSortOrder="asc">
     <thead>
     <tr>
-        <th style="width: 20%">
+        <th>
             <sv-default-sorter by="name">Name</sv-default-sorter>
         </th>
-        <th style="width: 50%">
-            <sv-default-sorter by="email">Email</sv-default-sorter>
-        </th>
-        <th style="width: 10%">
-            <sv-default-sorter by="age">Age</sv-default-sorter>
-        </th>
-        <th style="width: 20%">
-            <sv-default-sorter by="city">City</sv-default-sorter>
-        </th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>City</th>
     </tr>
     </thead>
     <tbody>
